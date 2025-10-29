@@ -12,11 +12,13 @@ return new class extends Migration
             $table->string('nama_user');
             $table->string('username')->unique();
             $table->string('password');
-            $table->enum('role', [
-                'Kepala',
-                'Admin Persediaan Barang',
-                'Admin Peminjaman Barang',
-            ])->default('admin');
+            // $table->enum('role', [
+            //     'Kepala',
+            //     'Admin Persediaan Barang',
+            //     'Admin Peminjaman Barang',
+            // ])->default('admin');
+            $table->enum('role', ['Kepala', 'Admin Persediaan Barang', 'Admin Peminjaman Barang']);
+
             $table->string('email')->unique();
             $table->string('no_telp');
            
